@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ListItem from './ListItem';
-import Summary from './Summary';
-import Payment from './Payment';
-import Header from './Header';
-import './App.css';
+import ListItem from './components/ListItem';
+import Summary from './components/Summary';
+import Payment from './components/Payment';
+import Header from './components/Header';
+import './styles/App.css';
 
 class App extends Component {
   state = {
