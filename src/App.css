@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+
+html,
+body {
+    background-color: #f4f4f4;
+    font-family: "Poppins";
+}
+
+#root {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: .9px;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+header h1>span {
+    color: darkred;
+}
+
+.summary {
+    border-top: 1px solid #ddd;
+    margin-top: 38px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary .order-summary {
+    text-align: right;
+}
+
+.order-total-value {
+    margin-top: 20px;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.menu-table {
+    width: 100%;
+}
+
+.menu-table th {
+    background-color: rgb(121, 0, 0);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.menu-table th:last-child,
+.menu-table th:nth-last-child(2) {
+    text-align: right;
+}
+
+.menu-table>tr:nth-child(odd) {
+    background-color: rgb(220, 220, 220)
+}
+
+.menu-table>tr:nth-child(even) {
+    background-color: rgb(230, 230, 230);
+}
+
+.menu-table>tr:nth-child(even):hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.menu-table>tr:nth-child(even):hover+tr>.ingredients {
+    background-color: rgba(121, 0, 0, .8);
+    color: #fff;
+}
+
+.menu-table>tr.selected,
+.menu-table>tr.selected:hover {
+
+    background-color: rgba(121, 0, 0, .3);
+}
+
+.menu-table td {
+    padding: 5px 10px;
+}
+
+td.product-no {
+    width: 5%;
+}
+
+td.product-name {
+    width: 20%;
+    cursor: pointer;
+    color: darkred;
+}
+
+td.product-quantity {
+    width: 35%;
+    font-size: 15px;
+}
+
+td.product-quantity>span {
+    margin: 0 13px;
+}
+
+.quantityChanger {
+    cursor: pointer;
+    color: darkred;
+    opacity: .8;
+    transition: opacity .2s;
+}
+
+.quantityChanger:hover {
+    opacity: 1;
+}
+
+td.product-name.selected {
+    font-weight: bold;
+}
+
+td.product-name.selected i {
+    margin-right: 6px;
+    color: darkgreen;
+}
+
+td.product-price,
+td.product-total-value {
+    width: 20%;
+    text-align: right;
+}
+
+td.ingredients {
+    font-size: 11px;
+    padding: 3px 5px 3px 6%;
+    color: #444;
+}
+
+td.ingredients>span {
+    margin-right: 4px;
+}
+
+.info-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-label i {
+    opacity: .6;
+    font-size: 18px;
+    vertical-align: -1px;
+    margin-right: 6px;
+}
+
+.info-label span {
+    font-size: 13px;
+}
+
+.action-info {
+    margin-bottom: 7px;
+    transition: opacity .2s .2s;
+    will-change: opacity;
+}
+
+.delivery-info {
+    text-align: right;
+}
+
+.free-delivery {
+    text-transform: uppercase;
+    color: darkred;
+    font-weight: bold;
+}
+
+.free-delivery i {
+    margin-right: 4px;
+}
+
+.payment-btn {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px 10px 25px;
+    font-size: 23px;
+    color: #fff;
+    font-family: Verdana;
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: darkred;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    opacity: .9;
+    transition: opacity .2s;
+    overflow: hidden;
+}
+
+.payment-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    transition: transform .2s;
+    border-left: 13px solid #f4f4f4;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
+.payment-btn:hover {
+    opacity: 1;
+}
+
+.payment-btn:hover::before {
+    transform: translate(0, -50%);
+    transition: transform .2s .2s;
+}
+
+.back-to-order {
+    display: inline-block;
+    margin-top: 40px;
+    color: unset;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    opacity: .8;
+}
+
+.back-to-order:hover {
+    opacity: 1;
+}
+
+.back-to-order::before {
+    content: '«';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-120%, -50%);
+    transition: .2s;
+}
+
+.back-to-order:hover::before {
+    transform: translate(-150%, -50%);
+}
